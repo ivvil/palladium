@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
-  <head>
-	<meta charset="utf-8" /> 
+
+<head>
+	<meta charset="utf-8" />
 	<title>Palladium</title>
-	<link rel="stylesheet" type="text/css" href="../static/palladium.css" @href="../static/palladium.css"  />
-  </head>
-  <body>
+	<link rel="stylesheet" type="text/css" href="../static/palladium.css" @href="/static/palladium/palladium.css" />
+</head>
+
+<body>
 	<header>
-	  <h1>Palladium</h1>
-	  <nav>
-		<a href="#" @href="palladium/dbview">New</a>
-	  </nav>
+		<h1>Palladium</h1>
+		<nav>
+			<a href="#" @href="palladium/dbview">New</a>
+		</nav>
 	</header>
 	<main>
-	  <form class="edit">
-		<header>
-		  <input type="text" name="action" placeholder="Action" maxlength="32" readonly  />
-		</header>
-		<textarea name="data" placeholder="Data for the action" readonly  />
-		<nav class="actions">
-		</nav>
-	  </form>
+		<c:using value="action">
+			<form class="edit">
+				<header>
+				  <input type="text" name="event" placeholder="Event" maxlength="32" readonly lquery="(val event)" />
+				  <time lquery="(time time)">2106.10.23</time>
+				</header>
+				<textarea name="data" placeholder="Data for the action" readonly lquery="(text data)" />
+				<nav class="actions">				  
+				</nav>
+			</form>
+		</c:using>
 	</main>
 	<footer>
 	</footer>
-  </body>
+</body>
+
 </html>

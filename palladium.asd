@@ -10,4 +10,6 @@
   :class "radiance:virtual-module"
   :components ((:file "module")
                (:file "frontend"))
-  :depends-on (:r-clip))
+  :depends-on ((:interface :database)
+			   :r-data-model
+			   :r-clip))

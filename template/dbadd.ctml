@@ -4,7 +4,7 @@
   <head>
 	<meta charset="utf-8" /> 
 	<title>Palladium</title>
-	<link rel="stylesheet" type="text/css" href="../static/palladium.css" @href="../static/palladium.css"  />
+	<link rel="stylesheet" type="text/css" href="../static/palladium.css" @href="/static/palladium/palladium.css"  />
   </head>
   <body>
 	<header>
@@ -14,9 +14,9 @@
 	  </nav>
 	</header>
 	<main>
-	  <form class="edit" method="post" action="#" @action="palladium/api/new">
+	  <form class="edit" method="post" action="#" @action="/api/palladium/new">
 		<header>
-		  <input type="text" name="action" placeholder="Action" maxlength="32"  />
+		  <input type="text" name="event" placeholder="Action" maxlength="32"  />
 		</header>
 		<textarea name="data" placeholder="Data for the action" autofocus required  />
 		<nav class="actions">
