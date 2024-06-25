@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+  <head>
+	<meta charset="utf-8" /> 
+	<title>Palladium</title>
+	<link rel="stylesheet" type="text/css" href="../static/palladium.css" @href="../static/palladium.css"  />
+  </head>
+  <body>
+	<header>
+	  <h1>Palladium</h1>
+	  <nav>
+		<a href="#" @href="palladium/dbview">New</a>
+	  </nav>
+	</header>
+	<main>
+	  <form class="edit" method="post" action="#" @action="palladium/api/new">
+		<header>
+		  <input type="text" name="action" placeholder="Action" maxlength="32"  />
+		</header>
+		<textarea name="data" placeholder="Data for the action" autofocus required  />
+		<nav class="actions">
+		  <input type="hidden" name="browser" value="true"  />
+		  <input type="submit" name="action" value="Post"  />
+		</nav>
+	  </form>
+	</main>
+	<footer>
+	</footer>
+  </body>
+</html>

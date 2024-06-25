@@ -1,4 +1,4 @@
-;;;; palladium.lisp
+;;;; module.lisp
 
 (in-package #:rad-user)
 (define-module #:palladium
