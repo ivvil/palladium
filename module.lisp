@@ -1,3 +1,5 @@
 ;;;; palladium.lisp
 
-(in-package #:palladium)
+(in-package #:rad-user)
+(define-module #:palladium
+  (:use #:cl #:radiance))
