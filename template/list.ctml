@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8">
+	<title>Palladium</title>
+	<link rel="styelesheet" type="text/css" href="../static/palladium.css" @href="/static/palladium/palladium.css">
+</head>
+
+<body>
+	<header>
+		<h1>Palladium</h1>
+		<nav>
+			<a href="#" @href="palladium/dbnew">New</a>
+		</nav>
+	</header>
+	<main>
+		<section class="event-list owned">
+			<header>
+				<h2>Events</h2>
+			</header>
+			<c:when test="(< 0 pages)">
+				<a class="button newer" href="#" @href="palladium/list/{0} (1- page)">Newer</a>
+			</c:when>
+			<ul iterate="events">
+				<li>
+					<a href="#" @href="palladium/dbview/{0} _id">
+						<span class="id" lquery="(text _id)">ID</span>
+						<span class="title" lquery="(text event)">TITLE</span>
+						<time lquery="(time time)"></time>
+					</a>
+				</li>
+			</ul>
+			<c:when test="has-more">
+				<a class="button older" href="#" @href="palladium/list/{0} (1+ page)">Older</a>
+			</c:when>
+		</section>
+	</main>
+</body>
+
+</html>

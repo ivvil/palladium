@@ -58,4 +58,21 @@
     :display flex
     :justify-content flex-end
     ((:or a input)
-     :display inline-block)))))
+     :display inline-block))))
+ (.button
+  :display block)
+ (.paste-list
+  (ul
+   :background (rgb 255 255 255)
+   :list-style none
+   :padding 0
+   :margin 0
+   (li (a
+		:background none
+		:display flex
+		:color (rgb 0 0 0)
+		:font-wheight normal
+		(.id :min-width 50px)
+		(.title :flex-grow 1))
+	   ("a:hover"
+		:background (rgb 220 220 220))))))
