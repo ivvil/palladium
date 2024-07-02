@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Palladium</title>
-	<link rel="styelesheet" type="text/css" href="../static/palladium.css" @href="/static/palladium/palladium.css">
+	<link rel="stylesheet" type="text/css" href="../static/palladium.css" @href="/static/palladium/palladium.css"  />
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 			<header>
 				<h2>Events</h2>
 			</header>
-			<c:when test="(< 0 pages)">
+			<c:when test="(< 0 page)">
 				<a class="button newer" href="#" @href="palladium/list/{0} (1- page)">Newer</a>
 			</c:when>
 			<ul iterate="events">

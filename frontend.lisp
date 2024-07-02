@@ -16,7 +16,7 @@
   (setf (content-type *response*) "text/plain")
   (dm:field (ensure-event id) "data"))
 
-(define-page list "plaster/list(?:/(.*))?" (:uri-groups (page) :clip "list.ctml")
+(define-page list "palladium/list(?:/(.*))?" (:uri-groups (page) :clip "list.ctml")
   (let* ((page (or (when page (parse-integer page :junk-allowed T)) 0))
          (events (dm:get 'palladium-actions (db:query :all)
                          :sort '((time :DESC))
